@@ -1,0 +1,65 @@
+          <!DOCTYPE html>
+          <html lang="pt-br">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Formulário de Cadastro</title>
+              <link rel="stylesheet" href="style.css">
+              <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+          </head>
+          <body>
+            
+           <div class="container">
+            <form action="" method="">
+              <h2>MEDIBuddy</h2>
+              <div class="content">
+                <div class="input-box">
+                  <label for="name">Nome completo</label>
+                  <input type="text" placeholder="Nome Completo" name="name" required>
+                </div>
+                <div class="input-box">
+                  <label for="username">Sobrenome</label>
+                  <input type="text" placeholder="Sobrenome" name="uname" required>
+                </div>
+                <div class="input-box">
+                  <label for="name">Email</label>
+                  <input type="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="input-box">
+                  <label for="name">Celular</label>
+                  <input type="text"  placeholder="Celular" name="phone" required>
+                </div>
+                <div class="input-box">
+                  <label for="name">Senha</label>
+                  <input type="password"  placeholder="Senha" name="password" required>
+                </div>
+                <div class="input-box">
+                  <label for="name">Confirmar Senha</label>
+                  <input type="password" placeholder="Confirmar Senha" name="confirmpassword" required>
+                </div>
+                <span class="gender-title">Gênero</span>
+                <div class="gender-category">
+                  <input type="radio" name="gender" id="male">
+                  <label for="male">Masculino</label>
+                  <input type="radio" name="gender" id="fmale">
+                  <label for="fmale">Feminino</label>
+                  <input type="radio" name="gender" id="other">
+                  <label for="other">Outros</label>
+                </div>
+              </div>
+              <div class="alert">
+                <p><input type="checkbox" required> Entre os tipos de dados pessoais que este aplicativo recolhe, por si só ou por meio de terceiros,
+                  estão e-mail, nome, sobrenome, cookies edados de uso.
+                </p>
+              </div>
+              <div class="button-container">
+                <button type="submit"> Cadastrar</button>
+              </div>
+            </form>
+           </div>
+           </div>
+           <script src="script.js"></script>
+
+          </body>
+          </html>

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#28bf96;
+    --primary-color-dark:#209677;
+    --text-dark:#111827;
+    --text-light:#6b7280;
+    --white:#ffffff;
+}
+button{
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color:var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+button:hover{
+    background-color: var(--primary-color-dark);
+}
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.nav__logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.nav__links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.link a{
+    text-decoration: none;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.link a:hover{
+    color: var(--primary-color);
+}
+main.table{
+   width: 82vw;
+   height: 90vh;
+   background-color: var(--white);
+   backdrop-filter: blur(7px);
+   box-shadow: 0 .4rem .8rem var(--text-light);
+   border-radius: .8rem;
+   overflow: hidden;
+}
+.table_header{
+    width: 100%;
+    height: 10%;
+    background-color: var(--primary-color);
+    padding: .8rem;
+    text-align: center;
+}
+.table_body{
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: var(--primary-color);
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+table, th, td{
+    padding: 1rem;
+    border-collapse: collapse;
+    text-align: center;
+}
+.table_body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: var(--text-dark);
+    visibility: hidden;
+}
+.table_body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+}
+tbody tr:nth-child(even){
+    background-color: var(--text-dark);
+}
+tbody tr:hover{
+    background-color: var(--text-light);
+}
+@media(max-width: 1000px){
+    td:not(:first-of-type){
+        min-width: 12.1rem;
+    }
+}
+
+ 
+

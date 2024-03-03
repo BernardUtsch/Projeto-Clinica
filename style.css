@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#28bf96;
+    --primary-color-dark:#209677;
+    --text-white:#ffffff;
+    --text-dark:#000;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary-color-dark);
+}
+.container{
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--primary-color-dark);
+    box-shadow: 0 15px 25px var(--text-dark);
+}
+h2{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-white);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--text-white);
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+.input-box label, .gender-title{
+    width: 95%;
+    color: var(--text-white);
+    font-weight: bold;
+    margin: 5px 0;
+}
+.gender-title{
+    font-size: 16px;
+}
+.input-box input{
+    height: 40px;
+    width: 95%;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 1px solid var(--text-white);
+    outline: none;
+}
+.input-box input:is(:focus, :valid){
+    box-shadow: 0 3px 6px var(--text-dark);
+}
+.gender-category label{
+    padding: 0 20px 0 5px;
+    font-size: 14px;
+}
+.gender-category{
+    color: var(--text-white);
+}
+.gender-category label, .gender-category input{
+    cursor: pointer;
+}
+.alert p{
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text-white);
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 1.5;
+    
+}
+.button-container{
+    margin: 15px 0;
+}
+.button-container button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: var(--primary-color-dark);
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, var(--primary-color-dark));
+}
+.button-container button:hover{
+    background-image: linear-gradient(to right, var(--primary-color));
+}
+@media(max-widht:600px){
+    .container{
+        min-width: 280px;
+    }
+    .content{
+        max-height: 380px;
+        overflow: auto;
+    }
+    .input-box{
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+    .gender-category{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+    .content::-webkit-scrollbar{
+        width: 0;
+    }
+}
